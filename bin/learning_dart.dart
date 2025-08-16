@@ -4,7 +4,10 @@
 // import 'package:learning_dart/logic/percabangan.dart';
 // import 'package:learning_dart/logic/fungsi_dan_parameter.dart';
 
-import 'package:learning_dart/logic/list_dan_map.dart';
+// import 'package:learning_dart/logic/list_dan_map.dart';
+import 'dart:io';
+
+import 'package:learning_dart/logic/mathematic_logic.dart';
 
 void main(List<String> arguments) {
   // print('Hello world: ${learning_dart.calculate()}!');
@@ -17,5 +20,18 @@ void main(List<String> arguments) {
   // print('Kali: ${kali(30, 20)}');
   // print('Bagi: ${bagi(40, 10)}');
 
-  exampleListAndMap();
+  // exampleListAndMap();
+  print(prima(100));
+
+  stdout.writeln();
+  int? n = int.tryParse(stdin.readLineSync() ?? '');
+  if (n == null) {
+    print('salah');
+  } else {
+    print(faktorial(n));
+  }
+
+  print(fibonacci(10));
+
+  print(nextPrima(20));
 }
